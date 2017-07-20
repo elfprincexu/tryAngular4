@@ -2,13 +2,13 @@
   <div class="col-sm-12">
     <carousel class="text-center">
       <slide  *ngFor="let imgObj of homeImageList">
-        <a href= '{{ imgObj.link }}' (click)="preventNormal($event,imgObj)">
+        <a href= '/videos/{{ imgObj.slug }}' (click)="preventNormal($event,imgObj)">
           <img class="img-main-carousel" [src]="imgObj.image" alt="First slide">
         </a>
         <div class="carousel-caption">
-          <h3>{{ imgObj.title }}</h3>
+          <h3>{{ imgObj.name }}</h3>
           <p>{{imgObj.content}}</p>
-          <a href="{{imgObj.link}}" class="btn btn-default">{{imgObj.title}}</a>
+          <a href="/videos/{{ imgObj.slug }}" class="btn btn-default">view {{imgObj.name}}</a>
         </div>
       </slide>
     </carousel>

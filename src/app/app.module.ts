@@ -7,6 +7,7 @@ import { VideoListComponent } from './video-list/video-list.component';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { AppRoutingModule} from "./app.routing";
 import { SafePipe } from './utilitiy/safe.pipe'
+import { HttpModule} from "@angular/http"
 
 // 3rd party import
 import {BsDropdownModule} from "ngx-bootstrap";
@@ -26,7 +27,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

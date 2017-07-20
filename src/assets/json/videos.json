@@ -1,0 +1,25 @@
+[
+  {
+    "name": "welcome",
+    "slug": "item-1",
+    "embed": "6wD4V0rvlDI",
+    "image": "assets/images/nature/4.jpg",
+    "content":"Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    "featured":true
+  },
+  {
+    "name": "item 2",
+    "slug": "item-2",
+    "embed": "6wD4V0rvlDI",
+    "image": "assets/images/nature/5.jpg",
+    "content":"Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    "featured":true
+  },
+  {
+    "name": "item 3",
+    "slug": "item-3",
+    "embed": null,
+    "image": "assets/images/nature/6.jpg",
+    "content":"Nulla vitae elit libero, a pharetra augue mollis interdum."
+  }
+]
