@@ -1,12 +1,17 @@
 <h1>
-  {{title}}
+  {{title}} {{ todayDate | date:"short" }}
 </h1>
 
-<p *ngFor="let item of videolist">
-  <a href="videos/{{item.slug}}" *ngIf="item.slug == 'item-2'">{{ item.name }}</a>
-  <a href="videos/{{item.slug}}" *ngIf="item.slug != 'item-2'" style="color:red">{{ item.name }}</a>
+<div *ngFor="let item of videolist">
+  <a href="videos/{{item.slug}}">{{ item.name }}</a>
 
-</p>
+  <div [innerHTML]="item.embed"></div>
+
+  <div *ngIf="item.embed">
+    <iframe [src]="getEmbedUrl(item) | safe" width="560" height="315"  frameborder="0" allowfullscreen ></iframe>
+  </div>
+
+</div>
 
 
 
