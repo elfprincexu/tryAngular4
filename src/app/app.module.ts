@@ -7,6 +7,10 @@ import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { AppRoutingModule} from "./app.routing";
 import { SafePipe } from './utilitiy/safe.pipe'
 
+// 3rd party import
+import {BsDropdownModule} from "ngx-bootstrap"
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +19,7 @@ import { SafePipe } from './utilitiy/safe.pipe'
     SafePipe
   ],
   imports: [
+    BsDropdownModule.forRoot(),
     BrowserModule,
     AppRoutingModule
   ],
