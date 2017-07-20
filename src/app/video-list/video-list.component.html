@@ -3,8 +3,8 @@
 </h1>
 
 <p *ngFor="let item of videolist">
-  <a href="{{item.slug}}" *ngIf="item.slug == 'item-2'">{{ item.name }}</a>
-  <a href="{{item.slug}}" *ngIf="item.slug != 'item-2'" style="color:red">{{ item.name }}</a>
+  <a href="videos/{{item.slug}}" *ngIf="item.slug == 'item-2'">{{ item.name }}</a>
+  <a href="videos/{{item.slug}}" *ngIf="item.slug != 'item-2'" style="color:red">{{ item.name }}</a>
 
 </p>
 
