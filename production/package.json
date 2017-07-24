@@ -1,0 +1,16 @@
+{
+  "name":"try-angular-v4",
+  "version":"1.0.0",
+  "main":"index.js",
+  "engines":{
+    "node":"6.11.1"
+  },
+  "dependencies": {
+    "ejs":"2.4.1",
+    "express":"4.13.3",
+    "path":"0.12.7",
+    "mongoose": "4.9.3",
+    "body-parser": "1.17.2",
+    "compression": "1.7.0"
+  }
+}
