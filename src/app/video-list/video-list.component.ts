@@ -1,5 +1,6 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {VideoService} from "../videos/videos.service"
+import {VideoItem} from "../videos/video"
 
 @Component({
   selector: 'video-list',
@@ -11,7 +12,7 @@ export class VideoListComponent implements OnInit , OnDestroy{
   title = "Video List";
   todayDate;
   private req:any;
-  videolist:[any];
+  videoList:[VideoItem];
 
   constructor(  private _video:VideoService) {
   }
@@ -20,7 +21,7 @@ export class VideoListComponent implements OnInit , OnDestroy{
   ngOnInit() {
     this.todayDate = new Date()
     this.req = this._video.list().subscribe(data =>{
-      this.videolist = data as [any]
+      this.videoList = data as [VideoItem]
     }) //  GET METHOD
   }
 

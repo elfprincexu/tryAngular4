@@ -1,28 +1,25 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {Http} from "@angular/http";
+import {VideoService} from "../videos/videos.service"
+import {VideoItem} from "../videos/video"
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers: [VideoService]
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
   private req:any;
-  homeImageList=[
-
-  ]
-
-  constructor(private http:Http,) { }
+  homeImageList: [VideoItem]  = [] as [VideoItem]
+  constructor(private http:Http, private router:Router, private _video:VideoService ) { }
 
   ngOnInit() {
-    this.req = this.http.get('assets/json/videos.json').subscribe(data=>{
-      console.log(data.json())
-      data.json().filter(item=>{
-        if (item.featured){
-          this.homeImageList.push(item)
-        }
-      })
+    this.req = this._video.featured().subscribe(data=>{
+      console.log(data)
+      this.homeImageList = data as [VideoItem]
     })
 
   }

@@ -20,6 +20,7 @@
     "slug": "item-3",
     "embed": null,
     "image": "assets/images/nature/6.jpg",
-    "content":"Nulla vitae elit libero, a pharetra augue mollis interdum."
+    "content":"Nulla, vitae elit libero, a pharetra augue mollis interdum.",
+    "featured": true
   }
 ]

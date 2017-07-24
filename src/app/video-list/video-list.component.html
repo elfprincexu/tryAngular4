@@ -2,7 +2,7 @@
   {{title}} {{ todayDate | date:"short" }}
 </h1>
 
-<div *ngFor="let item of videolist">
+<div *ngFor="let item of videoList">
   <h1>
     <a routerLink="/videos/{{item.slug}}" routerLinkActive="active">{{ item.name }}</a>
   </h1>

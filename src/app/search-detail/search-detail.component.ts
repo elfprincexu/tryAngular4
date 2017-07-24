@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router"
 import {VideoService} from "../videos/videos.service"
+import {VideoItem} from "../videos/video"
 
 @Component({
   selector: 'app-search-detail',
@@ -11,7 +12,7 @@ import {VideoService} from "../videos/videos.service"
 export class SearchDetailComponent implements OnInit , OnDestroy{
   private routeSub:any
   private req: any
-  videoList: [any]
+  videoList: [VideoItem]
   query:string
 
   constructor(private route: ActivatedRoute, private _video:VideoService) { }
@@ -21,7 +22,7 @@ export class SearchDetailComponent implements OnInit , OnDestroy{
       this.query = params['q']
       this.req = this._video.search(this.query).subscribe(
         data=>{
-          this.videoList = data as [any]
+          this.videoList = data as [VideoItem]
           console.log(this.videoList)
         }
       )

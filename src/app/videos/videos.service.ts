@@ -46,7 +46,19 @@ export class VideoService {
         return data
       })
       .catch(this.handleError)
+  }
 
+  featured(){
+    return this.http.get(endpoint)
+      .map(response => {
+        let data = []
+        let req = response.json().filter(item => {
+          if (item.featured){
+            data.push(item)
+          }
+        })
+        return data
+      })
   }
 
 
