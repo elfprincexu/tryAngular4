@@ -1,3 +1,18 @@
+
+# snapshot: 
+
+### Home Page
+![alt text]( screenshots/home.png "home page")
+
+### Searched Page
+![alt text]( screenshots/search.png "search page")
+
+# production:
+
+
+
+
+
 # CfeApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
