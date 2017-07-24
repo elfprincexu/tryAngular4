@@ -8,7 +8,8 @@
 ![alt text]( screenshots/search.png "search page")
 
 # production:
-productions located at /production/public folder
+
+> productions located at /production/public folder, supported Heroku deployment
 
 
 
