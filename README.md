@@ -2,10 +2,10 @@
 # snapshot: 
 
 ### Home Page
-![alt text]( screenshots/home.png "home page")
+![alt text]( ../screenshots/home.png "home page")
 
 ### Searched Page
-![alt text]( screenshots/search.png "search page")
+![alt text]( ../screenshots/search.png "search page")
 
 # production:
 
