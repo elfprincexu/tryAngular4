@@ -8,7 +8,7 @@ import {Router} from "@angular/router"
 })
 export class SearchComponent implements OnInit {
   searchLocation="NewPort Beach"
-  searchQuery = "new search"
+  searchQuery = "search"
   constructor(private route:Router) { }
 
   ngOnInit() {
