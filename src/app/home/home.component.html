@@ -1,6 +1,19 @@
 <div clas="row">
   <div class="col-sm-12">
     <carousel class="text-center">
+
+      <slide  >
+        <a routerLink="/videos/" routerLinkActive="active">
+          <img class="img-main-carousel" [src]="videoListDefaultImage" alt="First slide">
+        </a>
+        <div class="carousel-caption">
+          <h3>video list</h3>
+          <p>
+            <a routerLink="/videos/" routerLinkActive="active" class="btn btn-primary">view videos</a>
+          </p>
+        </div>
+      </slide>
+
       <slide  *ngFor="let imgObj of homeImageList">
         <a routerLink="/videos/{{imgObj.slug}}" routerLinkActive="active">
           <img class="img-main-carousel" [src]="imgObj.image" alt="First slide">

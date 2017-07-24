@@ -1,6 +1,16 @@
 <div *ngIf="video">
-<h1>{{video.name}}</h1>
-<p>
-  {{ video.slug }}
-</p>
+  <h1>{{video.name}}</h1>
+</div>
+<hr/>
+
+<div *ngIf="video">
+  <div *ngIf="video.embed">
+    <iframe [src]="getEmbedUrl(video) | safe" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div *ngIf="!video.embed && video.image">
+    <a>
+      <img class="img-responsive img-center" [src]="video.image" alt="{{ video.name}} image">
+    </a>
+  </div>
 </div>

@@ -4,6 +4,7 @@ import {VideoService} from "../videos/videos.service"
 import {VideoItem} from "../videos/video"
 import {Router} from "@angular/router";
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,6 +15,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private req:any;
   homeImageList: [VideoItem]  = [] as [VideoItem]
+  videoListDefaultImage= 'assets/videos/1.jpg'
+
+
+
   constructor(private http:Http, private router:Router, private _video:VideoService ) { }
 
   ngOnInit() {
