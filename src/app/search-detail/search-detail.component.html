@@ -1,0 +1,15 @@
+<search class="text-center search-inline"></search>
+<p *ngIf="query">
+  searched for {{ query }}
+</p>
+
+<div *ngFor="let video of videolist">
+  <h1><a routerLink="/videos/{{video.slug}}" routerLinkActive="active">
+    {{ video.name }}</a> </h1>
+  <div style="position: relative;height: 0;padding-bottom: 56.25;"
+       *ngIf="video.embed">
+    <iframe [src]="getEmbedUrl(video) | safe" allowfullscreen></iframe>
+  </div>
+</div>
+
+

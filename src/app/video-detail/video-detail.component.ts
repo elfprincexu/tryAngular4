@@ -32,7 +32,7 @@ export class VideoDetailComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(){
     this.routeSub.unsubscribe()
-    this.req.unsubscribe()
+    // this.req.unsubscribe()
   }
 
 }

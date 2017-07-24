@@ -3,7 +3,7 @@
 </h1>
 
 <div *ngFor="let item of videolist">
-  <a href="videos/{{item.slug}}">{{ item.name }}</a>
+  <a routerLink="/videos/{{item.slug}}" routerLinkActive="active">{{ item.name }}</a>
 
   <div [innerHTML]="item.embed"></div>
 
